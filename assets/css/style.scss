@@ -75,9 +75,14 @@ body {
     justify-content: space-between;
     padding: 0;
     &-card {
+        @include flex-center;
+        flex-direction: column;
+
         height: 400px;
         width: 33%;
         margin-bottom: 4%;
+
+        color: $primary-color;
         &-title {
             font-size: 2rem;
             font-weight: 300;
@@ -96,5 +101,41 @@ body {
                 color: $bg-color;
             }
         }
+    }
+    #card-1 {
+        @include bg-img('animais.jpg');
+    }
+    #card-2 {
+        @include bg-img('arquitetura.jpg');
+    }
+    #card-3 {
+        @include bg-img('cidade.jpg');
+    }
+    #card-4 {
+        @include bg-img('decoracao.jpg');
+    }
+    #card-5 {
+        @include bg-img('natureza.jpg');
+    }
+    #card-6 {
+        @include bg-img('paisagem.jpg');
+    }
+    #card-7 {
+        @include bg-img('pessoas.jpg');
+    }
+    #card-8 {
+        @include bg-img('refeicoes.jpg');
+    }
+    #card-9 {
+        @include bg-img('esportes.jpg');
+    }
+}
+
+footer {
+    text-align: center;
+    margin-bottom: 2rem;
+    span {
+        font-weight: bold;
+        color: $secondary-color;
     }
 }
