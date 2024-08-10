@@ -34,6 +34,9 @@ body {
     &-nav {
         ul {
             @include flex-center;
+            @include tablet {
+                display: none;
+            }
             
             height: 100%;
             gap: 1rem;
@@ -53,6 +56,9 @@ body {
         }
     }
     &-social-media {
+        @include tablet {
+            display: none;
+        }
         ul {
             @include flex-center;
 
@@ -71,16 +77,26 @@ body {
 .gallery {
     @include container;
     @include flex-center;
+    @include mobile {
+        justify-content: center;
+    }
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 0;
+    padding: 0 2%;
     &-card {
         @include flex-center;
+        @include tablet {
+            width: 100%;
+        }
+        @include mobile {
+            width: 90%;
+            margin-bottom: 8%;
+        }
         flex-direction: column;
 
         height: 400px;
-        width: 33%;
-        margin-bottom: 4%;
+        width: 32%;
+        margin-bottom: 2%;
 
         color: $primary-color;
         &-title {
@@ -133,7 +149,7 @@ body {
 
 footer {
     text-align: center;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     span {
         font-weight: bold;
         color: $secondary-color;
