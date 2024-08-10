@@ -1,1 +1,92 @@
-/*# sourceMappingURL=style.css.map */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+body {
+  background-color: #000;
+  color: #777;
+}
+body a {
+  text-decoration: none;
+  color: #777;
+  transition-duration: 0.4s;
+}
+body ul {
+  list-style: none;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1170px;
+  padding: 1.5rem 0;
+  margin-inline: auto;
+}
+.header-brand {
+  color: #fff;
+  font-size: 3rem;
+}
+.header-nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  gap: 1rem;
+}
+.header-nav ul li {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}
+.header-nav ul li .active {
+  color: #20c997;
+}
+.header-nav ul li a:hover {
+  color: #20c997;
+}
+.header-social-media ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  gap: 1rem;
+}
+.header-social-media ul li a:hover {
+  color: #fff;
+}
+
+.gallery {
+  max-width: 1170px;
+  padding: 1.5rem 0;
+  margin-inline: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0;
+}
+.gallery-card {
+  height: 400px;
+  width: 33%;
+  margin-bottom: 4%;
+}
+.gallery-card-title {
+  font-size: 2rem;
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+.gallery-card-btn {
+  padding: 0.6rem 2rem;
+  border: 2px solid #fff;
+  color: #fff;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.gallery-card-btn:hover {
+  background-color: #fff;
+  color: #000;
+}/*# sourceMappingURL=style.css.map */

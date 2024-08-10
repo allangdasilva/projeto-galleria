@@ -1,0 +1,100 @@
+@use 'variables.scss' as *;
+@use 'mixins.scss' as *;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Josefin Sans", sans-serif;
+}
+body {
+    background-color: $bg-color;
+    color: $text-color;
+
+    a {
+        text-decoration: none;
+        color: $text-color;
+        transition-duration: 0.4s;
+    }
+    ul {
+        list-style: none;
+    }
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    @include container;
+
+    // & é como se fosse .header-brand 
+    &-brand {
+        color: $primary-color;
+        font-size: 3rem;
+    }
+    &-nav {
+        ul {
+            @include flex-center;
+            
+            height: 100%;
+            gap: 1rem;
+
+            li {
+                font-size: 0.8rem;
+                text-transform: uppercase;
+                .active {
+                    color: $secondary-color;
+                }
+                a {
+                    &:hover {
+                        color: $secondary-color;
+                    }
+                }
+            }
+        }
+    }
+    &-social-media {
+        ul {
+            @include flex-center;
+
+            height: 100%;
+            gap: 1rem;
+            li {
+                a {
+                    &:hover {
+                        color: $primary-color;
+                    }
+                }
+            }
+        }
+    }
+}
+.gallery {
+    @include container;
+    @include flex-center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0;
+    &-card {
+        height: 400px;
+        width: 33%;
+        margin-bottom: 4%;
+        &-title {
+            font-size: 2rem;
+            font-weight: 300;
+            margin-bottom: 1rem;
+        }
+        &-btn {
+            padding: 0.6rem 2rem;
+            border: 2px solid $primary-color;
+            color: $primary-color;
+
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            &:hover {
+                background-color: $primary-color;
+                color: $bg-color;
+            }
+        }
+    }
+}

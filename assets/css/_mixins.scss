@@ -1,0 +1,12 @@
+@use 'variables.scss' as *;
+
+@mixin container {
+    max-width: $container-width;
+    padding: 1.5rem 0;
+    margin-inline: auto;
+}
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
